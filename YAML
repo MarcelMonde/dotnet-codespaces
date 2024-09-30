@@ -27,7 +27,7 @@ Resources:
             - SubscriptionType: EMAIL
               Address: marcelmonde@hotmail.com
             - SubscriptionType: EMAIL
-              Address: email2@example.com
+              Address: marcelmonde@hotmail.com
         - Notification:
             NotificationType: ACTUAL
             ComparisonOperator: GREATER_THAN

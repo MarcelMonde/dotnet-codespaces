@@ -1,0 +1,8 @@
+Type: AWS::Budgets::Budget
+Properties:
+  Budget: 
+    BudgetData
+  NotificationsWithSubscribers: 
+    - NotificationWithSubscribers
+  ResourceTags: 
+    - ResourceTag

@@ -1,0 +1,40 @@
+---
+Description: "Basic Budget"
+Resources:
+  BudgetExample:
+    Type: "AWS::Budgets::Budget"
+    Properties:
+      Budget:
+        BudgetLimit:
+          Amount: 16000
+          Unit: USD
+        TimeUnit: MONTHLY
+        TimePeriod:
+          Start: 1225864800
+          End: 1926864800
+        BudgetType: COST
+        CostFilters:
+          AZ:
+            - us-east-1
+            - us-west-1
+            - us-east-2
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 750
+          Subscribers: 1
+            - SubscriptionType: EMAIL
+              Address: marcelmonde@hotmail.com
+            - SubscriptionType: EMAIL
+              Address: email2@example.com
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: 60
+          Subscribers:
+          - SubscriptionType: EMAIL
+            Address: email@example.com
+Outputs:
+  BudgetId:
+    Value: $50000

@@ -35,6 +35,6 @@ Resources:
           Subscribers:
           - SubscriptionType: EMAIL
             Address: email@example.com
-Outputs:
+Outputs:bc1qsz6kjgw0t68czqzpl33qrnx4emdedd3gprjggx
   BudgetId:
-    Value: $50000
+    Value: 50000
